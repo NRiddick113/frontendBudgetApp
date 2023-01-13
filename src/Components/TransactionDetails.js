@@ -29,9 +29,12 @@ function TransactionDetails() {
       .catch((e) => console.error(e));
   };
   return (
-    <article>
-      <h3>{transaction.item_name}</h3>
-
+    <article className="Show">
+      <h2>{transaction.item_name} - ${transaction.amount}</h2>
+      <br></br>
+      <h3>Date: {transaction.date}</h3>
+      <h3>Paid From: {transaction.from}</h3>
+      <h3>Category: {transaction.category}</h3>
       <div className="showNavigation">
         <div className="transaction">
           <Link to={`/transactions`}>

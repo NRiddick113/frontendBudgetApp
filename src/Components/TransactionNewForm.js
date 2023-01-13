@@ -13,13 +13,14 @@ function TransactionNewForm() {
     category: "",
   });
 
+  console.log(transaction)
   const handleTextChange = (event) => {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
   
-  const addTransaction = (newtransaction) => {
+  const addTransaction = (newTransaction) => {
     axios
-    .post(`${API}/transactions`, newtransaction)
+    .post(`${API}/transactions`, newTransaction)
     .then(
     () => {
     navigate(`/transactions`);
@@ -29,10 +30,10 @@ function TransactionNewForm() {
    
   const handleSubmit = (event) => {
     event.preventDefault();
-    addTransaction()
+    addTransaction(transaction)
   };
   return (
-    <div className="New Transaction" >
+    <div className="New-Transaction" >
       <form onSubmit={handleSubmit}>
       <label htmlFor="date">Date</label>
         <input
