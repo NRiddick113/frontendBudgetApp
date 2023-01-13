@@ -1,3 +1,9 @@
+Backend Repo:  https://github.com/NRiddick113/project-budgeting-app
+
+Deployed Frontend: https://rad-medovik-13a9cd.netlify.app
+Deployed Backend: https://budgetapp-deploy-back.onrender.com
+
+
 # frontendBudgetApp
 
 Create a backend API using Express that performs full CRUD on a single model, `transactions`. Then, using RESTful routes, connect it to a React app.
